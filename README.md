@@ -1,2 +1,2 @@
 # programmers
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+[백준허브]를 이용해 프로그래머스에서 푼 코딩테스트 기록을 자동으로 깃허브에 연동해줍니다.
