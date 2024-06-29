@@ -3,10 +3,9 @@ import java.util.Arrays;
 class Solution {
     public int solution(int[] array, int n) {
         int answer = 0;
-        answer = (int) Arrays.stream(array)
-                .boxed()
-                .filter(arr -> arr.equals(n))
+        
+        return (int) Arrays.stream(array)
+                .filter(arr -> arr == n)
                 .count();
-        return answer;
     }
 }
