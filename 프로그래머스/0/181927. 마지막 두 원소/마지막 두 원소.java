@@ -2,19 +2,25 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] num_list) {
-        int[] answer = new int[num_list.length + 1];
-        int last = 0;
-        if (num_list[num_list.length - 1] > num_list[num_list.length - 2]) {
-            last = num_list[num_list.length - 1] - num_list[num_list.length - 2];
+        List<Integer> answer = new ArrayList<>();
+
+        int lastBeforeOne = num_list[num_list.length - 2];
+        int lastOne = num_list[num_list.length - 1];
+
+        Arrays.stream(num_list)
+                .forEach(
+                        answer::add
+                );
+
+        if (lastOne > lastBeforeOne) {
+            answer.add(lastOne - lastBeforeOne);
         } else {
-            last = num_list[num_list.length - 1] * 2;
+            answer.add(lastOne * 2);
         }
-        
-        for (int i = 0; i < num_list.length; i++) {
-            answer[i] = num_list[i];
-        }
-        answer[answer.length - 1] = last;
-        
-        return answer;
+
+        return answer.stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
+
     }
 }
