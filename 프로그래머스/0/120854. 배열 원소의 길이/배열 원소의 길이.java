@@ -3,8 +3,7 @@ import java.util.*;
 class Solution {
     public int[] solution(String[] strlist) {
         return Arrays.stream(strlist)
-            .map(str -> str.length())
-            .mapToInt(Integer::intValue)
+            .mapToInt(String::length)
             .toArray();
     }
 }
